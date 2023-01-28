@@ -65,7 +65,7 @@ div.notifications-container > header #mark-read:hover {
   cursor: pointer;
 }
 div.notifications-container main {
-  height: 88%;
+  height: 80%;
   overflow-y: scroll;
 }
 div.notifications-container main .card {
@@ -79,6 +79,7 @@ div.notifications-container main .card {
   color: hsl(219deg, 14%, 63%);
   position: relative;
   margin-bottom: 10px;
+  transition: all 0.2s linear;
 }
 div.notifications-container main .card img.profile-picture {
   width: 50px;
@@ -126,6 +127,7 @@ div.notifications-container main .card p.message-body:hover {
 }
 div.notifications-container main .card.unread {
   background-color: hsl(210deg, 60%, 98%);
+  cursor: pointer;
 }
 div.notifications-container main .card.unread div.title::after {
   width: 7px;

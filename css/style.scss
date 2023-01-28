@@ -50,6 +50,7 @@ div.notifications-container {
     border-radius: .5rem;
     padding: 30px;
     position: relative;
+    box-shadow: 2px 3px 10px 0px $n-grayish-blue;
 
     >header {
         display: flex;
@@ -87,6 +88,10 @@ div.notifications-container {
             &:hover {
                 color: $p-blue;
                 cursor: pointer;
+            }
+
+            &:active {
+                transform: scale(90%);
             }
         }
     }
@@ -169,6 +174,14 @@ div.notifications-container {
                     display: inline-block;
                     content: '';
                 }
+            }
+
+            &:hover {
+                background-color: $n-light-grayish-blue-1;
+            }
+
+            &:active {
+                transform: scale(98%);
             }
         }
 

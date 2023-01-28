@@ -28,6 +28,7 @@ div.notifications-container {
   border-radius: 0.5rem;
   padding: 30px;
   position: relative;
+  box-shadow: 2px 3px 10px 0px hsl(219deg, 14%, 63%);
 }
 div.notifications-container > header {
   display: flex;
@@ -63,6 +64,9 @@ div.notifications-container > header #mark-read {
 div.notifications-container > header #mark-read:hover {
   color: hsl(219deg, 85%, 26%);
   cursor: pointer;
+}
+div.notifications-container > header #mark-read:active {
+  transform: scale(90%);
 }
 div.notifications-container main {
   height: 80%;
@@ -137,6 +141,12 @@ div.notifications-container main .card.unread div.title::after {
   background-color: red;
   display: inline-block;
   content: "";
+}
+div.notifications-container main .card:hover {
+  background-color: hsl(211deg, 68%, 94%);
+}
+div.notifications-container main .card:active {
+  transform: scale(98%);
 }
 div.notifications-container main .comment-card {
   grid-template-columns: -webkit-max-content auto -webkit-max-content;

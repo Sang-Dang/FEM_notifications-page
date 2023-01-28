@@ -10,9 +10,10 @@
 
 	<title>Frontend Mentor | Notifications page</title>
 
-	<link href="./assets/fonts/PlusJakartaSans-VariableFont_wght.ttf" rel="stylesheet">
-	<link rel="stylesheet" href="./assets/fonts/static/PlusJakartaSans-Medium.ttf">
-	<link rel="stylesheet" href="./assets/fonts/static/PlusJakartaSans-ExtraBold.ttf">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;800&display=swap"
+		rel="stylesheet">
 
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
@@ -21,10 +22,173 @@
 <body>
 
 	<div class="notifications-container">
+		<header>
+			<div class="title">
+				<h1>Notifications</h1>
+				<div class="notification-count">4</div>
+			</div>
+			<button type="button" id="mark-read">Mark all as read</button>
+		</header>
+		<main>
+			<section class="card react-card unread">
+				<img src="./assets/images/avatar-mark-webber.webp" alt="profile picture" class="profile-picture">
+				<div class="content">
+					<div class="title">
+						<a class="sender" href="#">Mark Webber</a> reacted to your recent post <a class="link" href="#">My first tournament today!</a>
+					</div>
+					<span class="time">1m</span> ago
+				</div>
+			</section>
+			<section class="card follow-card unread">
+				<img src="./assets/images/avatar-angela-gray.webp" alt="profile picture" class="profile-picture">
+				<div class="content">
+					<div class="title">
+						<a class="sender" href="#">Angela Gray</a>
+						followed you
+					</div>
+					<span class="time">5m</span> ago
+				</div>
+			</section>
+			<section class="card group-join-card unread">
+				<img src="./assets/images/avatar-jacob-thompson.webp" alt="profile picture" class="profile-picture">
+				<div class="content">
+					<div class="title">
+						<a class="sender" href="#">Jacop Thompson</a>
+						has joined your group
+						<a href="#" class="group">Chess Club</a>
+					</div>
+					<span class="time">1 day</span> ago
+				</div>
+			</section>
+			<section class="card private-message-card unread">
+				<img src="./assets/images/avatar-rizky-hasanuddin.webp" alt="profile picture" class="profile-picture">
+				<div class="content">
+					<div class="title">
+						<a class="sender" href="#">Rizky Hasanuddin</a>
+						sent you a private message
+					</div>
+					<span class="time">5 days</span> ago
+					<p class="message-body">Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.</p>
+				</div>
+			</section>
+			<section class="card comment-card unread">
+				<img src="./assets/images/avatar-kimberly-smith.webp" alt="profile picture" class="profile-picture">
+				<div class="content">
+					<div class="title">
+						<a class="sender" href="#">Kimberly Smith</a>
+						commented on your picture
+					</div>
+					<span class="time">1 week</span> ago
+				</div>
+				<img src="./assets/images/image-chess.webp" alt="picture" class="picture-comment">
+			</section>
+			<section class="card react-card unread">
+				<img src="./assets/images/avatar-nathan-peterson.webp" alt="profile picture" class="profile-picture">
+				<div class="content">
+					<div class="title">
+						<a class="sender" href="#">Nathan Peterson</a>
+						reacted to your recent post 
+						<a class="link" href="#">5 end-game strategies to increase your win rate</a>
+					</div>
+					<span class="time">2 weeks</span> ago
+				</div>
+			</section>
+			<section class="card group-leave-card unread">
+				<img src="./assets/images/avatar-anna-kim.webp" alt="profile picture" class="profile-picture">
+				<div class="content">
+					<div class="title">
+						<a class="sender" href="#">Anna Kim</a>
+						left the group <a href="#" class="group">Chess Club</a>
+					</div>
+					<span class="time">2 weeks</span> ago
+				</div>
+			</section>
+		</main>
 
+		<!-- I'm planning to link this to a database using Java EE, so I'll have a template section to retrieve the data using JSPs. -->
+
+		<!-- Alternatively, I could use Javascript to insert the data into each template and display it, but that's kinda pointless since the submission's static. -->
+		<div class="notifications-template hidden">
+			<!-- TEMPLATE FOR ALL CARDS -->
+			<section class="card template">
+				<img src="" alt="profile picture" class="profile-picture">
+				<div class="content">
+					<div class="title">
+						<a class="sender" href="#"></a>
+						<a class="content" href="#"></a>
+					</div>
+					<span class="time"></span> ago
+				</div>
+			</section>
+			<!-- TYPES OF CARDS -->
+			<section class="card react-card">
+				<img src="" alt="profile picture" class="profile-picture">
+				<div class="content">
+					<div class="title">
+						<a class="sender" href="#"></a>
+						reacted to your recent post 
+						<a class="link" href="#"></a>
+					</div>
+					<span class="time"></span> ago
+				</div>
+			</section>
+			<section class="card follow-card">
+				<img src="" alt="profile picture" class="profile-picture">
+				<div class="content">
+					<div class="title">
+						<a class="sender" href="#"></a>
+						followed you
+					</div>
+					<span class="time"></span> ago
+				</div>
+			</section>
+			<section class="card group-join-card">
+				<img src="" alt="profile picture" class="profile-picture">
+				<div class="content">
+					<div class="title">
+						<a class="sender" href="#"></a>
+						has joined your group
+						<a href="#" class="group"></a>
+					</div>
+					<span class="time"></span> ago
+				</div>
+			</section>
+			<section class="card private-message-card">
+				<img src="" alt="profile picture" class="profile-picture">
+				<div class="content">
+					<div class="title">
+						<a class="sender" href="#"></a>
+						sent you a private message
+					</div>
+					<span class="time"></span> ago
+					<p class="message-body"></p>
+				</div>
+			</section>
+			<section class="card comment-card">
+				<img src="" alt="profile picture" class="profile-picture">
+				<div class="content">
+					<div class="title">
+						<a class="sender" href="#"></a>
+						commented on your picture
+					</div>
+					<span class="time"></span> ago
+				</div>
+				<img src="" alt="picture" class="picture-comment">
+			</section>
+			<section class="card group-leave-card">
+				<img src="" alt="profile picture" class="profile-picture">
+				<div class="content">
+					<div class="title">
+						<a class="sender" href="#"></a>
+						left the group <a href="#" class="group"></a>
+					</div>
+					<span class="time"></span> ago
+				</div>
+			</section>
+		</div>
 	</div>
 
-	Notifications 3
+	<!-- Notifications 3
 
 	Mark all as read
 
@@ -49,7 +213,7 @@
 	2 weeks ago
 
 	Anna Kim left the group Chess Club
-	2 weeks ago
+	2 weeks ago -->
 
 	<script src="./js/script.js"></script>
 </body>

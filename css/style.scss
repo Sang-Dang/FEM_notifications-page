@@ -12,3 +12,173 @@ $n-dark-grayish-blue: hsl(219, 12%, 42%);
 $n-very-dark-blue: hsl(224, 21%, 14%);
 
 $paragraph-font-size: 16px;
+$font-stack: 'Plus Jakarta Sans';
+
+// Path: css\style.scss
+
+// DEFAULT STYLES
+:root {
+    font-size: $paragraph-font-size;
+}
+
+.hidden {
+    display: none;
+}
+
+html {
+    height: 100vh;
+    width: 100vw;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100%;
+    font-family: $font-stack;
+    background-color: $n-light-grayish-blue-1;
+}
+
+// MAIN STYLES
+
+div.notifications-container {
+
+    height: 80vh;
+    max-height: 500px;
+    width: 100vw;
+    max-width: 700px;
+    background-color: $n-white;
+    border-radius: .5rem;
+    padding: 30px;
+    position: relative;
+
+    >header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 30px;
+        width: 100%;
+        position: relative;
+        top: 0;
+
+        div.title {
+            display: flex;
+            align-items:center;
+            gap: clamp(0rem, 1vw, 1rem);
+            font-size: clamp(.7rem, 2vw, 1rem);
+        }
+
+        div.notification-count {
+            height: 60%;
+            color: $n-white;
+            background-color: $p-blue;
+            padding: 2px 12px;
+            border-radius: .5rem;
+        }
+
+        #mark-read {
+            background-color: transparent;
+            color: $n-dark-grayish-blue;
+            border: none;
+            text-align: right;
+            padding: 0;
+            font-size: clamp(.6rem, 3vw, 1rem);
+            transition: all 0.2s linear;
+
+            &:hover {
+                color: $p-blue;
+                cursor: pointer;
+            }
+        }
+    }
+
+    main {
+        height: 88%;
+        overflow-y: scroll;
+
+        .card {
+            width: 100%;
+            padding: 15px;
+            display: grid;
+            grid-template-columns: max-content auto;
+            gap: 15px;
+            border-radius: .5rem;
+            color: $n-grayish-blue;
+            position: relative;
+            margin-bottom: 10px;
+
+            img.profile-picture {
+                width: 50px; 
+                height: 50px;
+                object-fit: contain;
+            }
+
+            div.title {
+                margin-right: 25px;
+            }
+
+            div.title, a.link {
+                color: $n-dark-grayish-blue;
+            }
+
+            a.group {
+                color: $p-blue;
+            }
+
+            a {
+                text-decoration: none;
+                font-weight: 800;
+                transition: all 0.2s linear;
+                
+                &.sender {
+                    color: $n-very-dark-blue;
+                    padding-right: 5px;
+                }
+
+                &:hover {
+                    color: $p-blue;
+                }
+            }
+
+            p.message-body {
+                border: 1px solid $n-light-grayish-blue-2;
+                margin-top: 10px;
+                padding: 15px;
+                border-radius: .2rem;
+                color: $n-dark-grayish-blue;
+                margin-bottom: 20px;
+                user-select: none;
+                cursor: pointer;
+                transition: all 0.1s linear;
+
+                &:hover {
+                    background-color: $n-light-grayish-blue-2;
+                }
+            }
+
+            &.unread {
+                background-color: $n-very-light-grayish-blue;
+
+                div.title::after {
+                    width: 7px;
+                    height: 7px;
+                    border-radius: 50%;
+                    margin-left: 2px;
+                    background-color: red;
+                    display: inline-block;
+                    content: '';
+                }
+            }
+        }
+
+        .comment-card {
+            grid-template-columns: max-content auto max-content;
+
+            img.picture-comment {
+                width: 50px;
+                cursor: pointer;
+                user-select: none;
+            }
+        }
+    }
+}
+

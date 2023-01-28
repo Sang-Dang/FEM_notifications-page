@@ -1,1 +1,150 @@
-/*# sourceMappingURL=style.css.map */
+:root {
+  font-size: 16px;
+}
+
+.hidden {
+  display: none;
+}
+
+html {
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  font-family: "Plus Jakarta Sans";
+  background-color: hsl(211deg, 68%, 94%);
+}
+
+div.notifications-container {
+  height: 80vh;
+  max-height: 500px;
+  width: 100vw;
+  max-width: 700px;
+  background-color: hsl(0deg, 0%, 100%);
+  border-radius: 0.5rem;
+  padding: 30px;
+  position: relative;
+}
+div.notifications-container > header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 30px;
+  width: 100%;
+  position: relative;
+  top: 0;
+}
+div.notifications-container > header div.title {
+  display: flex;
+  align-items: center;
+  gap: clamp(0rem, 1vw, 1rem);
+  font-size: clamp(0.7rem, 2vw, 1rem);
+}
+div.notifications-container > header div.notification-count {
+  height: 60%;
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(219deg, 85%, 26%);
+  padding: 2px 12px;
+  border-radius: 0.5rem;
+}
+div.notifications-container > header #mark-read {
+  background-color: transparent;
+  color: hsl(219deg, 12%, 42%);
+  border: none;
+  text-align: right;
+  padding: 0;
+  font-size: clamp(0.6rem, 3vw, 1rem);
+  transition: all 0.2s linear;
+}
+div.notifications-container > header #mark-read:hover {
+  color: hsl(219deg, 85%, 26%);
+  cursor: pointer;
+}
+div.notifications-container main {
+  height: 88%;
+  overflow-y: scroll;
+}
+div.notifications-container main .card {
+  width: 100%;
+  padding: 15px;
+  display: grid;
+  grid-template-columns: -webkit-max-content auto;
+  grid-template-columns: max-content auto;
+  gap: 15px;
+  border-radius: 0.5rem;
+  color: hsl(219deg, 14%, 63%);
+  position: relative;
+  margin-bottom: 10px;
+}
+div.notifications-container main .card img.profile-picture {
+  width: 50px;
+  height: 50px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+div.notifications-container main .card div.title {
+  margin-right: 25px;
+}
+div.notifications-container main .card div.title, div.notifications-container main .card a.link {
+  color: hsl(219deg, 12%, 42%);
+}
+div.notifications-container main .card a.group {
+  color: hsl(219deg, 85%, 26%);
+}
+div.notifications-container main .card a {
+  text-decoration: none;
+  font-weight: 800;
+  transition: all 0.2s linear;
+}
+div.notifications-container main .card a.sender {
+  color: hsl(224deg, 21%, 14%);
+  padding-right: 5px;
+}
+div.notifications-container main .card a:hover {
+  color: hsl(219deg, 85%, 26%);
+}
+div.notifications-container main .card p.message-body {
+  border: 1px solid hsl(205deg, 33%, 90%);
+  margin-top: 10px;
+  padding: 15px;
+  border-radius: 0.2rem;
+  color: hsl(219deg, 12%, 42%);
+  margin-bottom: 20px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  transition: all 0.1s linear;
+}
+div.notifications-container main .card p.message-body:hover {
+  background-color: hsl(205deg, 33%, 90%);
+}
+div.notifications-container main .card.unread {
+  background-color: hsl(210deg, 60%, 98%);
+}
+div.notifications-container main .card.unread div.title::after {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  margin-left: 2px;
+  background-color: red;
+  display: inline-block;
+  content: "";
+}
+div.notifications-container main .comment-card {
+  grid-template-columns: -webkit-max-content auto -webkit-max-content;
+  grid-template-columns: max-content auto max-content;
+}
+div.notifications-container main .comment-card img.picture-comment {
+  width: 50px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}/*# sourceMappingURL=style.css.map */
